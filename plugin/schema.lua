@@ -2,7 +2,7 @@ local typedefs = require "kong.db.schema.typedefs"
 
 
 return {
-  name = "compliance-callout",
+  name = "kong-compliance-callout",
   fields = {
     { config = 
       {
