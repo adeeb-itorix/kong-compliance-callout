@@ -51,6 +51,8 @@ function complianceCallout:response(conf)
   local statusCode = kong.response.get_status()
   resData.headerParams = resHeaders
   resData.statusCode = statusCode
+  resData.body = kong.response.get_body()
+  compliancePayload.response = resData
 
   local res, err = client:request_uri(conf.target, {
     method = "POST",
